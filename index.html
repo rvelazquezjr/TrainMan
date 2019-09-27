@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Time Clock</title>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link src="stylesheet" type="assets/java.js">
+    <title>Time Clock, Baby!</title>
 </head>
 
 <body>
@@ -16,45 +19,16 @@
         <div class="row" id="index-heading">
             <div class="col-md-12">
                 <h1>Time Clock</h1>
-
             </div>
-
         </div>
         <div class="row" id="time-heading">
             <div class="col-md-12">
                 <button class="btn btn-primary" id="loginButton">Login</button>
-
             </div>
-
         </div>
-
-
-
-
-
     </div>
-    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
-    <script>
-        var firebaseConfig = {
-            apiKey: "AIzaSyDYN76GkB2ffmfQ5w9gYB2x-TE9ajiQr-0",
-            authDomain: "trainman.firebaseapp.com",
-            databaseURL: "https://trainman.firebaseio.com",
-            projectId: "trainman",
-            storageBucket: "trainman.appspot.com",
-            messagingSenderId: "689056881576",
-            appId: "1:689056881576:web:bcec4ebf42b4233dcd5b9d"
-        };
-        firebase.initializeApp(firebaseConfig);
-    </script>
-    <script>
-        $("#loginButton").click(function() {
-            console.log("Click me again!");
-            var currentTime = Date.now();
-            var ref = firebase.database().ref('Timestamp').child(currentTime).set({
-                [currentTime]: true
-            })
-        })
-    </script>
+
+
 </body>
 
 </html>
